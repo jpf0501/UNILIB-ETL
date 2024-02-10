@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{EA252502-08BC-4711-8B2C-50D88849A1ED}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{891E45B0-1D8A-42FC-ABE6-F6876DDA3B1B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -85,6 +85,98 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E6C86210-22AC-4F3D-A70C-03BDFAD4BA2E}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Solution\URS_DATA\SOURCE\USERACCOUNT_LIST.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="userId"
+              DTS:DTSID="{279B1CDA-C275-4A83-98A6-68D225AEE452}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="username"
+              DTS:DTSID="{D398B7BD-05CE-4B91-AF01-EE9F3F2939AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="password"
+              DTS:DTSID="{4A02C14D-5B69-4EBB-A565-73B4FAE73968}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="isAdmin"
+              DTS:DTSID="{8C8BC0BD-928E-4D42-872D-0A8BB168078F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="isActive"
+              DTS:DTSID="{3B3FB1C1-5552-40B5-B98D-34A9606E81F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdDate"
+              DTS:DTSID="{DF49317B-464C-4557-9058-2D660151AA26}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="roleId"
+              DTS:DTSID="{93C6ED19-A240-4556-9309-03DCDE1B29C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="studentId"
+              DTS:DTSID="{AE34C838-ADCE-4466-88F1-1B8B49CA0084}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dataExist"
+              DTS:DTSID="{9A3F38F3-2662-4FEF-BE6A-71985A625F57}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[localhost\MSSQLSERVER01.TEST]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{577B8BA4-80EB-41F1-84D6-A5D1FB957F18}"
@@ -107,7 +199,147 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7IPToy6SL0+zrAQRsp8OFQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADN94TMLRXZqmsw+4iwcz+BAAAAAASAAACgAAAAEAAAABNMdzhngW5XNL+9X1/qaUAYAAAA7aNfWN+Wq6eWGROJnXuYQiYbZI88EoHhFAAAAEu9i8434fMg8q5FqZZl682sp54S</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA7IPToy6SL0+zrAQRsp8OFQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAvtrx1FJpMnPL70AP/wa9tAAAAAASAAACgAAAAEAAAAFoEcATnVwXNHnPpyuOZSsgYAAAAvLc7G/2GvqM3RDAVhWUbKWu7WCv8G/CPFAAAAHXCafEcs480RUBdz00ZpXWHR782</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[STUDENTS]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AEBFA0EF-2089-4634-A6F1-BB6F1AAE9496}"
+      DTS:ObjectName="STUDENTS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="8192"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Solution\URS_DATA\SOURCE\STUDENTNO_LIST.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="studentId"
+              DTS:DTSID="{B8FB715D-783A-4FD6-A420-D63F77822DAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="studentNo"
+              DTS:DTSID="{7A92E057-198B-41E5-93A0-C0B3F048002D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="firstName"
+              DTS:DTSID="{B17566D0-B962-464A-BC91-6B8EF11DCC43}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="middleName"
+              DTS:DTSID="{5CA09EC8-35BC-490C-8E22-2A28BECEE285}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="lastName"
+              DTS:DTSID="{77A1E2D4-405C-4C4E-9113-F7D635FEE937}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="courseId"
+              DTS:DTSID="{3536EFCA-4B5B-4F56-82E0-3A913989BEBA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="section"
+              DTS:DTSID="{8C7402DA-7F78-4CC0-977A-50AC856604D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="contactNo"
+              DTS:DTSID="{C48F29E9-D50F-45EB-969A-F89D1506E92F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="gender"
+              DTS:DTSID="{A7F469E4-2982-4067-94BC-B48419540B88}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="createdDate"
+              DTS:DTSID="{DF5BE478-D12B-4190-AED7-21C953D3EB95}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="isActive"
+              DTS:DTSID="{89E2E3DA-6CF9-46D3-BC5C-29A99ADF4B72}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="address"
+              DTS:DTSID="{037519C2-F117-463A-B2F5-9523C84C7C07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="userId"
+              DTS:DTSID="{3C604DC8-D21D-4B38-91F7-2826D23926FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="qrCodePath"
+              DTS:DTSID="{3C3D3231-5A7D-4113-9947-3D5C315C58A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="libraryIdPath"
+              DTS:DTSID="{9193503B-A94E-40F8-B0F5-328BFED831B6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -115,40 +347,23 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\COURSE SEQUENCE"
+      DTS:refId="Package\ACCOUNT"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:DTSID="{52891C88-95D9-4B7A-A606-1882B00EB07F}"
+      DTS:DTSID="{9f21aa14-5abb-4f2e-83a0-cd4dc8d0955f}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
-      DTS:ObjectName="COURSE SEQUENCE">
+      DTS:ObjectName="ACCOUNT">
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\COURSE SEQUENCE\CLEAN COURSE TABLE"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{D3475A9A-CDD7-48ED-B206-5D71AFCEDCCD}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="CLEAN COURSE TABLE"
-          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-          DTS:ThreadHint="0">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{577B8BA4-80EB-41F1-84D6-A5D1FB957F18}"
-              SQLTask:SqlStatementSource="DELETE FROM Courses" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\COURSE SEQUENCE\GENERATE COURSES"
+          DTS:refId="Package\ACCOUNT\ADD ACCOUNT RECORDS"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{2F88F784-4830-4D07-9179-BB9F330FE8F9}"
+          DTS:DTSID="{d5e93a88-fabc-458d-81c8-e1f3d3be609c}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
-          DTS:ObjectName="GENERATE COURSES"
+          DTS:ObjectName="ADD ACCOUNT RECORDS"
           DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
@@ -156,7 +371,637 @@
               version="1">
               <components>
                 <component
-                  refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION"
+                  refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="ACCOUNT DESTINATION"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Accounts"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost\MSSQLSERVER01.TEST.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost\MSSQLSERVER01.TEST.sa]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[userId]"
+                          cachedDataType="i4"
+                          cachedName="userId"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[userId]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[userId]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[username]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="username"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[username]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[username]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[password]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="password"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[password]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[password]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[isAdmin]"
+                          cachedDataType="bool"
+                          cachedName="isAdmin"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isAdmin]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[isAdmin]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[isActive]"
+                          cachedDataType="bool"
+                          cachedName="isActive"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[isActive]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[createdDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="createdDate"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[createdDate]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[roleId]"
+                          cachedDataType="i4"
+                          cachedName="roleId"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[roleId]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[roleId]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[studentId]"
+                          cachedDataType="i4"
+                          cachedName="studentId"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[studentId]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[studentId]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].Columns[dataExist]"
+                          cachedDataType="bool"
+                          cachedName="dataExist"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[dataExist]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[dataExist]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[userId]"
+                          dataType="i4"
+                          name="userId" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[username]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="username" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[password]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="password" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isAdmin]"
+                          dataType="bool"
+                          name="isAdmin" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
+                          dataType="bool"
+                          name="isActive" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
+                          dataType="dbTimeStamp"
+                          name="createdDate" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[roleId]"
+                          dataType="i4"
+                          name="roleId" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[studentId]"
+                          dataType="i4"
+                          name="studentId" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[dataExist]"
+                          dataType="bool"
+                          name="dataExist" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="8192"
+                  name="ACCOUNT SOURCE"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[userId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[userId]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[userId]"
+                          name="userId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[username]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[username]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[username]"
+                          name="username"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[password]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[password]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[password]"
+                          name="password"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[isAdmin]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[isAdmin]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[isAdmin]"
+                          name="isAdmin"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[isActive]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[isActive]"
+                          name="isActive"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[createdDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[createdDate]"
+                          name="createdDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[roleId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[roleId]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[roleId]"
+                          name="roleId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[studentId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[studentId]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[studentId]"
+                          name="studentId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[dataExist]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[dataExist]"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[dataExist]"
+                          name="dataExist"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[userId]"
+                          dataType="i4"
+                          name="userId" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[username]"
+                          codePage="1252"
+                          dataType="text"
+                          name="username" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[password]"
+                          codePage="1252"
+                          dataType="text"
+                          name="password" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[isAdmin]"
+                          dataType="bool"
+                          name="isAdmin" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
+                          dataType="bool"
+                          name="isActive" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
+                          dataType="dbTimeStamp"
+                          name="createdDate" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[roleId]"
+                          dataType="i4"
+                          name="roleId" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[studentId]"
+                          dataType="i4"
+                          name="studentId" />
+                        <externalMetadataColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].ExternalColumns[dataExist]"
+                          dataType="bool"
+                          name="dataExist" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="DT_TEXT TO DT_NTEXT"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[username]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="username"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[username]" />
+                        <inputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[password]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="password"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[password]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of username]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of username]"
+                          name="Copy of username"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[username]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of password]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of password]"
+                          name="Copy of password"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output].Columns[password]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\ACCOUNT\ADD ACCOUNT RECORDS.Paths[Data Conversion Output]"
+                  endId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION.Inputs[ADO NET Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\ACCOUNT\ADD ACCOUNT RECORDS.Paths[Flat File Source Output]"
+                  endId="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\ACCOUNT\DELETE RECORDS"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{a45027e1-4262-4413-9718-5f67c65dd493}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DELETE RECORDS"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{577B8BA4-80EB-41F1-84D6-A5D1FB957F18}"
+              SQLTask:SqlStatementSource="DELETE FROM Accounts" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\ACCOUNT.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{da73e0c5-069f-4673-91ba-c0a1d00bd87a}"
+          DTS:From="Package\ACCOUNT\DELETE RECORDS"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\ACCOUNT\ADD ACCOUNT RECORDS" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\COURSE"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{52891C88-95D9-4B7A-A606-1882B00EB07F}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="COURSE">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\COURSE\ADD COURSE RECORDS"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{2F88F784-4830-4D07-9179-BB9F330FE8F9}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ADD COURSE RECORDS"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION"
                   componentClassID="Microsoft.ManagedComponentHost"
                   contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
                   description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
@@ -191,7 +1036,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Connections[IDbConnection]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Connections[IDbConnection]"
                       connectionManagerID="Package.ConnectionManagers[localhost\MSSQLSERVER01.TEST.sa]"
                       connectionManagerRefId="Package.ConnectionManagers[localhost\MSSQLSERVER01.TEST.sa]"
                       description="Managed connection manager"
@@ -199,76 +1044,76 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input]"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="ADO NET Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[courseName]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[courseName]"
                           cachedCodepage="65001"
                           cachedDataType="text"
                           cachedName="courseName"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseName]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseName]" />
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseName]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseName]" />
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[isActive]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[isActive]"
                           cachedDataType="bool"
                           cachedName="isActive"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[isActive]" />
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[isActive]" />
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[courseCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[courseCode]"
                           cachedCodepage="65001"
                           cachedDataType="text"
                           cachedName="courseCode"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseCode]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseCode]" />
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseCode]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseCode]" />
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[createdDate]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[createdDate]"
                           cachedDataType="dbTimeStamp"
                           cachedName="createdDate"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[createdDate]" />
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[createdDate]" />
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[collegeId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[collegeId]"
                           cachedDataType="i4"
                           cachedName="collegeId"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[collegeId]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[collegeId]" />
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[collegeId]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[collegeId]" />
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[﻿courseId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].Columns[﻿courseId]"
                           cachedDataType="i4"
                           cachedName="﻿courseId"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseId]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[﻿courseId]" />
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseId]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[﻿courseId]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseId]"
                           dataType="i4"
                           name="courseId" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseName]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseName]"
                           dataType="wstr"
                           length="2147483647"
                           name="courseName" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
                           dataType="bool"
                           name="isActive" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseCode]"
                           dataType="wstr"
                           length="2147483647"
                           name="courseCode" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
                           dataType="dbTimeStamp"
                           name="createdDate" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[collegeId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[collegeId]"
                           dataType="i4"
                           name="collegeId" />
                       </externalMetadataColumns>
@@ -276,22 +1121,22 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Outputs[ADO NET Destination Error Output]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Outputs[ADO NET Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="ADO NET Destination Error Output"
-                      synchronousInputId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input]">
+                      synchronousInputId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -300,12 +1145,12 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE"
+                  refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE"
                   componentClassID="Microsoft.FlatFileSource"
                   contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
                   description="Flat File Source"
                   localeId="8192"
-                  name="COURSE FILE"
+                  name="COURSE SOURCE"
                   usesDispositions="true"
                   version="1">
                   <properties>
@@ -320,23 +1165,23 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Connections[FlatFileConnection]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Connections[FlatFileConnection]"
                       connectionManagerID="Package.ConnectionManagers[COURSES]"
                       connectionManagerRefId="Package.ConnectionManagers[COURSES]"
                       name="FlatFileConnection" />
                   </connections>
                   <outputs>
                     <output
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output]"
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[﻿courseId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[﻿courseId]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[﻿courseId]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[﻿courseId]"
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[﻿courseId]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[﻿courseId]"
                           name="﻿courseId"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -351,13 +1196,13 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseName]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseName]"
                           codePage="65001"
                           dataType="text"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[courseName]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseName]"
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[courseName]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseName]"
                           name="courseName"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -372,12 +1217,12 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[isActive]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[isActive]"
                           dataType="bool"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[isActive]"
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[isActive]"
                           name="isActive"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -392,13 +1237,13 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseCode]"
                           codePage="65001"
                           dataType="text"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[courseCode]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseCode]"
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[courseCode]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseCode]"
                           name="courseCode"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -413,12 +1258,12 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[createdDate]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[createdDate]"
                           dataType="dbTimeStamp"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[createdDate]"
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[createdDate]"
                           name="createdDate"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -433,12 +1278,12 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[collegeId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[collegeId]"
                           dataType="i4"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[collegeId]"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[collegeId]"
+                          externalMetadataColumnId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[collegeId]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[collegeId]"
                           name="collegeId"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -456,55 +1301,55 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[﻿courseId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[﻿courseId]"
                           dataType="i4"
                           name="﻿courseId" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[courseName]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[courseName]"
                           codePage="65001"
                           dataType="text"
                           name="courseName" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
                           dataType="bool"
                           name="isActive" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[courseCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[courseCode]"
                           codePage="65001"
                           dataType="text"
                           name="courseCode" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
                           dataType="dbTimeStamp"
                           name="createdDate" />
                         <externalMetadataColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].ExternalColumns[collegeId]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].ExternalColumns[collegeId]"
                           dataType="i4"
                           name="collegeId" />
                       </externalMetadataColumns>
                     </output>
                     <output
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Error Output]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Error Output]"
                       isErrorOut="true"
                       name="Flat File Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           codePage="65001"
                           dataType="text"
                           description="Flat File Source Error Output Column"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                           name="Flat File Source Error Output Column" />
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -513,7 +1358,7 @@
                   </outputs>
                 </component>
                 <component
-                  refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT"
+                  refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT"
                   componentClassID="Microsoft.DataConvert"
                   contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
                   description="Data Conversion"
@@ -521,38 +1366,38 @@
                   usesDispositions="true">
                   <inputs>
                     <input
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
                       name="Data Conversion Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[courseName]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[courseName]"
                           cachedCodepage="65001"
                           cachedDataType="text"
                           cachedName="courseName"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseName]" />
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseName]" />
                         <inputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[courseCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[courseCode]"
                           cachedCodepage="65001"
                           cachedDataType="text"
                           cachedName="courseCode"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseCode]" />
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseCode]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]"
                       exclusionGroup="1"
                       name="Data Conversion Output"
-                      synchronousInputId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
+                      synchronousInputId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseName]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseName]"
                           dataType="nText"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseName]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseName]"
                           name="Copy of courseName"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -560,7 +1405,7 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseName]}</property>
+                              name="SourceInputColumnLineageID">#{Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseName]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -568,11 +1413,11 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseCode]"
                           dataType="nText"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseCode]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of courseCode]"
                           name="Copy of courseCode"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -580,7 +1425,7 @@
                               containsID="true"
                               dataType="System.Int32"
                               description="Specifies the input column used as the source of data for the conversion."
-                              name="SourceInputColumnLineageID">#{Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output].Columns[courseCode]}</property>
+                              name="SourceInputColumnLineageID">#{Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output].Columns[courseCode]}</property>
                             <property
                               dataType="System.Boolean"
                               description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -591,22 +1436,22 @@
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output]"
+                      refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Data Conversion Error Output"
-                      synchronousInputId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
+                      synchronousInputId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          refId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -617,32 +1462,1111 @@
               </components>
               <paths>
                 <path
-                  refId="Package\COURSE SEQUENCE\GENERATE COURSES.Paths[Data Conversion Output]"
-                  endId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION.Inputs[ADO NET Destination Input]"
+                  refId="Package\COURSE\ADD COURSE RECORDS.Paths[Data Conversion Output]"
+                  endId="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION.Inputs[ADO NET Destination Input]"
                   name="Data Conversion Output"
-                  startId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]" />
+                  startId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]" />
                 <path
-                  refId="Package\COURSE SEQUENCE\GENERATE COURSES.Paths[Flat File Source Output]"
-                  endId="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
+                  refId="Package\COURSE\ADD COURSE RECORDS.Paths[Flat File Source Output]"
+                  endId="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
                   name="Flat File Source Output"
-                  startId="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE.Outputs[Flat File Source Output]" />
+                  startId="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE.Outputs[Flat File Source Output]" />
               </paths>
             </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\COURSE\DELETE RECORDS"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{D3475A9A-CDD7-48ED-B206-5D71AFCEDCCD}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DELETE RECORDS"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{577B8BA4-80EB-41F1-84D6-A5D1FB957F18}"
+              SQLTask:SqlStatementSource="DELETE FROM Courses" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
       <DTS:PrecedenceConstraints>
         <DTS:PrecedenceConstraint
-          DTS:refId="Package\COURSE SEQUENCE.PrecedenceConstraints[Constraint]"
+          DTS:refId="Package\COURSE.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
           DTS:DTSID="{0437A747-2A23-4B20-8DFA-96748BCB83FC}"
-          DTS:From="Package\COURSE SEQUENCE\CLEAN COURSE TABLE"
+          DTS:From="Package\COURSE\DELETE RECORDS"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
-          DTS:To="Package\COURSE SEQUENCE\GENERATE COURSES" />
+          DTS:To="Package\COURSE\ADD COURSE RECORDS" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\STUDENT"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{257e6184-f137-4fde-bc85-b011c5f25a5c}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="STUDENT">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\STUDENT\ADD STUDENT RECORDS"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{91b8348a-6cd4-4a06-8abd-e5c6b701b723}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="ADD STUDENT RECORDS"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="DT_TEXT TO DT_NTEXT"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[studentNo]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="studentNo"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentNo]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[firstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="firstName"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[firstName]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[middleName]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="middleName"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[middleName]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[lastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="lastName"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[lastName]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[section]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="section"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[section]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[contactNo]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="contactNo"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[contactNo]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[address]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="address"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[address]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[qrCodePath]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="qrCodePath"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[qrCodePath]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input].Columns[libraryIdPath]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="libraryIdPath"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[libraryIdPath]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of studentNo]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of studentNo]"
+                          name="Copy of studentNo"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentNo]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of firstName]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of firstName]"
+                          name="Copy of firstName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[firstName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of middleName]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of middleName]"
+                          name="Copy of middleName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[middleName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of lastName]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of lastName]"
+                          name="Copy of lastName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[lastName]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of section]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of section]"
+                          name="Copy of section"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[section]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of contactNo]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of contactNo]"
+                          name="Copy of contactNo"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[contactNo]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of address]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of address]"
+                          name="Copy of address"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[address]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of qrCodePath]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of qrCodePath]"
+                          name="Copy of qrCodePath"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[qrCodePath]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of libraryIdPath]"
+                          dataType="nText"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output].Columns[Copy of libraryIdPath]"
+                          name="Copy of libraryIdPath"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[libraryIdPath]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION"
+                  componentClassID="Microsoft.ManagedComponentHost"
+                  contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+                  description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+                  name="STUDENT DESTINATION"
+                  usesDispositions="true"
+                  version="2">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="The Destination database table name."
+                      expressionType="Notify"
+                      name="TableOrViewName"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Students"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                      expressionType="Notify"
+                      name="BatchSize">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                      expressionType="Notify"
+                      name="CommandTimeout">30</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                      expressionType="Notify"
+                      name="UseBulkInsertWhenPossible">true</property>
+                    <property
+                      dataType="System.String"
+                      name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Connections[IDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost\MSSQLSERVER01.TEST.sa]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost\MSSQLSERVER01.TEST.sa]"
+                      description="Managed connection manager"
+                      name="IDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input]"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="ADO NET Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[studentId]"
+                          cachedDataType="i4"
+                          cachedName="studentId"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[studentId]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentId]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[studentNo]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="studentNo"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[studentNo]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentNo]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[firstName]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="firstName"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[firstName]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[firstName]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[middleName]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="middleName"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[middleName]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[middleName]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[lastName]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="lastName"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[lastName]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[lastName]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[courseId]"
+                          cachedDataType="i4"
+                          cachedName="courseId"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseId]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[courseId]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[section]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="section"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[section]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[section]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[contactNo]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="contactNo"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[contactNo]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[contactNo]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[gender]"
+                          cachedDataType="i4"
+                          cachedName="gender"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[gender]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[gender]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[createdDate]"
+                          cachedDataType="dbTimeStamp"
+                          cachedName="createdDate"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[createdDate]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[isActive]"
+                          cachedDataType="bool"
+                          cachedName="isActive"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[isActive]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[address]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="address"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[address]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[address]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[userId]"
+                          cachedDataType="i4"
+                          cachedName="userId"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[userId]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[userId]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[qrCodePath]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="qrCodePath"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[qrCodePath]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[qrCodePath]" />
+                        <inputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].Columns[libraryIdPath]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="libraryIdPath"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[libraryIdPath]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[libraryIdPath]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[studentId]"
+                          dataType="i4"
+                          name="studentId" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[studentNo]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="studentNo" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[firstName]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="firstName" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[middleName]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="middleName" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[lastName]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="lastName" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[courseId]"
+                          dataType="i4"
+                          name="courseId" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[section]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="section" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[contactNo]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="contactNo" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[gender]"
+                          dataType="i4"
+                          name="gender" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[createdDate]"
+                          dataType="dbTimeStamp"
+                          name="createdDate" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[isActive]"
+                          dataType="bool"
+                          name="isActive" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[address]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="address" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[userId]"
+                          dataType="i4"
+                          name="userId" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[qrCodePath]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="qrCodePath" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input].ExternalColumns[libraryIdPath]"
+                          dataType="wstr"
+                          length="2147483647"
+                          name="libraryIdPath" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Outputs[ADO NET Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="ADO NET Destination Error Output"
+                      synchronousInputId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="8192"
+                  name="STUDENT SOURCE"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">true</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[STUDENTS]"
+                      connectionManagerRefId="Package.ConnectionManagers[STUDENTS]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[studentId]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentId]"
+                          name="studentId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentNo]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[studentNo]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[studentNo]"
+                          name="studentNo"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[firstName]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[firstName]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[firstName]"
+                          name="firstName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[middleName]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[middleName]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[middleName]"
+                          name="middleName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[lastName]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[lastName]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[lastName]"
+                          name="lastName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[courseId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[courseId]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[courseId]"
+                          name="courseId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[section]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[section]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[section]"
+                          name="section"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[contactNo]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[contactNo]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[contactNo]"
+                          name="contactNo"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[gender]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[gender]"
+                          name="gender"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[createdDate]"
+                          dataType="dbTimeStamp"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[createdDate]"
+                          name="createdDate"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[isActive]"
+                          dataType="bool"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[isActive]"
+                          name="isActive"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[address]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[address]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[address]"
+                          name="address"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[userId]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[userId]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[userId]"
+                          name="userId"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[qrCodePath]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[qrCodePath]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[qrCodePath]"
+                          name="qrCodePath"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[libraryIdPath]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[libraryIdPath]"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].Columns[libraryIdPath]"
+                          name="libraryIdPath"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[studentId]"
+                          dataType="i4"
+                          name="studentId" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[studentNo]"
+                          codePage="1252"
+                          dataType="text"
+                          name="studentNo" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[firstName]"
+                          codePage="1252"
+                          dataType="text"
+                          name="firstName" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[middleName]"
+                          codePage="1252"
+                          dataType="text"
+                          name="middleName" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[lastName]"
+                          codePage="1252"
+                          dataType="text"
+                          name="lastName" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[courseId]"
+                          dataType="i4"
+                          name="courseId" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[section]"
+                          codePage="1252"
+                          dataType="text"
+                          name="section" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[contactNo]"
+                          codePage="1252"
+                          dataType="text"
+                          name="contactNo" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[gender]"
+                          dataType="i4"
+                          name="gender" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[createdDate]"
+                          dataType="dbTimeStamp"
+                          name="createdDate" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[isActive]"
+                          dataType="bool"
+                          name="isActive" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[address]"
+                          codePage="1252"
+                          dataType="text"
+                          name="address" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[userId]"
+                          dataType="i4"
+                          name="userId" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[qrCodePath]"
+                          codePage="1252"
+                          dataType="text"
+                          name="qrCodePath" />
+                        <externalMetadataColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output].ExternalColumns[libraryIdPath]"
+                          codePage="1252"
+                          dataType="text"
+                          name="libraryIdPath" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\STUDENT\ADD STUDENT RECORDS.Paths[Data Conversion Output]"
+                  endId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION.Inputs[ADO NET Destination Input]"
+                  name="Data Conversion Output"
+                  startId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\STUDENT\ADD STUDENT RECORDS.Paths[Flat File Source Output]"
+                  endId="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\STUDENT\DELETE RECORDS"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{d32f26d9-7671-425a-842b-9ffd519618d2}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DELETE RECORDS"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{577B8BA4-80EB-41F1-84D6-A5D1FB957F18}"
+              SQLTask:SqlStatementSource="DELETE FROM Students" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\STUDENT.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{b0195f3c-069c-42ea-a9a3-0946768c6c74}"
+          DTS:From="Package\STUDENT\DELETE RECORDS"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\STUDENT\ADD STUDENT RECORDS" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{395C0F62-05D4-4F4C-AC4D-2F941E66F27B}"
+      DTS:From="Package\COURSE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\STUDENT" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DFB3B316-6E66-40F3-B21A-A240FF467056}"
+      DTS:From="Package\STUDENT"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\ACCOUNT" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -654,18 +2578,18 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="203,42"
-          Id="Package\COURSE SEQUENCE\CLEAN COURSE TABLE"
-          TopLeft="34,21.5" />
+          Size="180,42"
+          Id="Package\COURSE\DELETE RECORDS"
+          TopLeft="44,21.5" />
         <NodeLayout
-          Size="197,42"
-          Id="Package\COURSE SEQUENCE\GENERATE COURSES"
+          Size="210,42"
+          Id="Package\COURSE\ADD COURSE RECORDS"
           TopLeft="30.5,176.25" />
         <EdgeLayout
-          Id="Package\COURSE SEQUENCE.PrecedenceConstraints[Constraint]"
-          TopLeft="132.25,63.5">
+          Id="Package\COURSE.PrecedenceConstraints[Constraint]"
+          TopLeft="134.75,63.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -690,26 +2614,170 @@
           IsExpanded="True"
           PanelSize="259,273"
           Size="259,316"
-          Id="Package\COURSE SEQUENCE"
+          Id="Package\COURSE"
           TopLeft="127.5,40" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\STUDENT\DELETE RECORDS"
+          TopLeft="50.25,22.75" />
+        <NodeLayout
+          Size="215,42"
+          Id="Package\STUDENT\ADD STUDENT RECORDS"
+          TopLeft="30.5,176.25" />
+        <EdgeLayout
+          Id="Package\STUDENT.PrecedenceConstraints[Constraint]"
+          TopLeft="139.125,64.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111.5"
+              Start="0,0"
+              End="0,104">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,104" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="259,273"
+          Size="259,316"
+          Id="Package\STUDENT"
+          TopLeft="450.25,40" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="386.5,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.75,0"
+              Start="0,0"
+              End="56.25,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.25,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="217,42"
+          Id="Package\ACCOUNT\ADD ACCOUNT RECORDS"
+          TopLeft="30.5,176.25" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\ACCOUNT\DELETE RECORDS"
+          TopLeft="50.25,22.75" />
+        <EdgeLayout
+          Id="Package\ACCOUNT.PrecedenceConstraints[Constraint]"
+          TopLeft="139.625,64.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111.5"
+              Start="0,0"
+              End="0,104">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,104" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="259,273"
+          Size="259,316"
+          Id="Package\ACCOUNT"
+          TopLeft="765.5,40" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="709.25,198">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56.25,0"
+              Start="0,0"
+              End="48.75,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="48.75,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\COURSE SEQUENCE\GENERATE COURSES">
+    design-time-name="Package\COURSE\ADD COURSE RECORDS">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="206,42"
-          Id="Package\COURSE SEQUENCE\GENERATE COURSES\DT_TEXT TO DT_NTEXT"
+          Id="Package\COURSE\ADD COURSE RECORDS\DT_TEXT TO DT_NTEXT"
           TopLeft="176,134.25" />
         <NodeLayout
+          Size="176,42"
+          Id="Package\COURSE\ADD COURSE RECORDS\COURSE SOURCE"
+          TopLeft="193,39" />
+        <NodeLayout
           Size="203,42"
-          Id="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION"
+          Id="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION"
           TopLeft="178,243" />
         <EdgeLayout
-          Id="Package\COURSE SEQUENCE\GENERATE COURSES.Paths[Data Conversion Output]"
+          Id="Package\COURSE\ADD COURSE RECORDS.Paths[Flat File Source Output]"
+          TopLeft="280,81">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.25"
+              Start="0,0"
+              End="0,45.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\COURSE\ADD COURSE RECORDS.Paths[Data Conversion Output]"
           TopLeft="279.25,176.25">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -730,24 +2798,70 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\COURSE\ADD COURSE RECORDS\COURSE DESTINATION">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\STUDENT\ADD STUDENT RECORDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42"
-          Id="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE FILE"
-          TopLeft="205,44" />
+          Size="206,42"
+          Id="Package\STUDENT\ADD STUDENT RECORDS\DT_TEXT TO DT_NTEXT"
+          TopLeft="176,134.25" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\STUDENT\ADD STUDENT RECORDS\STUDENT SOURCE"
+          TopLeft="190,25" />
         <EdgeLayout
-          Id="Package\COURSE SEQUENCE\GENERATE COURSES.Paths[Flat File Source Output]"
-          TopLeft="280,86">
+          Id="Package\STUDENT\ADD STUDENT RECORDS.Paths[Flat File Source Output]"
+          TopLeft="279.75,67">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.25"
+              EndConnector="0,67.25"
               Start="0,0"
-              End="0,40.75">
+              End="0,59.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.75" />
+                    End="0,59.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="208,42"
+          Id="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION"
+          TopLeft="179,247" />
+        <EdgeLayout
+          Id="Package\STUDENT\ADD STUDENT RECORDS.Paths[Data Conversion Output]"
+          TopLeft="281,176.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70.75"
+              Start="0,0"
+              End="0,63.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.25" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -760,7 +2874,79 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\COURSE SEQUENCE\GENERATE COURSES\COURSE DESTINATION">
+    design-time-name="Package\STUDENT\ADD STUDENT RECORDS\STUDENT DESTINATION">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\ACCOUNT\ADD ACCOUNT RECORDS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="206,42"
+          Id="Package\ACCOUNT\ADD ACCOUNT RECORDS\DT_TEXT TO DT_NTEXT"
+          TopLeft="176,134.25" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT SOURCE"
+          TopLeft="188,33" />
+        <EdgeLayout
+          Id="Package\ACCOUNT\ADD ACCOUNT RECORDS.Paths[Flat File Source Output]"
+          TopLeft="279.25,75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.25"
+              Start="0,0"
+              End="0,51.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="210,42"
+          Id="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION"
+          TopLeft="179,240" />
+        <EdgeLayout
+          Id="Package\ACCOUNT\ADD ACCOUNT RECORDS.Paths[Data Conversion Output]"
+          TopLeft="281.5,176.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.75"
+              Start="0,0"
+              End="0,56.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ACCOUNT\ADD ACCOUNT RECORDS\ACCOUNT DESTINATION">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
